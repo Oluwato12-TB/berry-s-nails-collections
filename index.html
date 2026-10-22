@@ -1,0 +1,295 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#81244e">
+  <meta name="description" content="Shop elegant press-on nail designs and custom-fit nail sets at Berry's Nails Collections.">
+  <title>Berry's Nails Collections | Luxury Press-On Nails</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="announcement"> 
+    BEAUTY AT YOUR FINGERTIPS ✦ CUSTOM NAILS MADE FOR YOU
+  </div>
+
+  <header class="header">
+    <a class="brand" href="#home">
+      <span class="brand-mark">B</span>
+      <span>Berry's <small>N A I L S  C O L L E C T I O N S</small></span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle"
+      aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
+    <nav id="navigation">
+      <a href="#home">Home</a>
+      <a href="#collection">Press-On Collection</a>
+      <a href="#custom">Custom Nails</a>
+      <a href="#appointment">Book Appointment</a>
+      <a href="#about">Our Story</a>
+    </nav>
+
+    <button class="cart-button" id="openCart" aria-label="Open shopping cart">
+      Bag <span id="cartCount">0</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <span class="eyebrow">YOUR NAILS, YOUR STATEMENT</span>
+        <h1>Luxury at your<br><em>fingertips.</em></h1>
+        <p>Beautiful press-on nails for every mood, every moment
+          and every version of you. Made to stand out. Designed to feel like you.</p>
+        <div class="hero-actions">
+          <a href="#collection" class="btn btn-primary">Shop the collection ↗</a>
+          <a href="#custom" class="btn btn-outline">Create your custom set</a>
+          <a href="#appointment" class="btn btn-outline">Book an appointment</a>
+        </div>
+        <div class="hero-note">✦ Stylish sets · ✦ Custom sizing · ✦ Easy ordering</div>
+      </div>
+      <div class="hero-art">
+        <img
+          src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1100&q=85"
+          alt="Beautiful manicure and nail art"
+          fetchpriority="high">
+        <div class="hero-sticker"><span>Made for</span><strong>your<br>moment.</strong></div>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <div><span>✧</span> BEAUTY WITHOUT LIMITS</div>
+      <div><span>♡</span> CUSTOM-FIT OPTIONS</div>
+      <div><span>✦</span> YOUR STYLE, YOUR RULES</div>
+    </section>
+
+    <section class="collection section" id="collection">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">THE BERRY EDIT</span>
+          <h2>Press-on <em>collection.</em></h2>
+          <p>Find your next favourite set from our signature designs.</p>
+        </div>
+        <span class="product-total" id="productTotal">20 designs</span>
+      </div>
+
+      <div class="shop-controls">
+        <label class="search-box">
+          <span aria-hidden="true">⌕</span>
+          <input type="search" id="searchInput" placeholder="Search nail designs..."
+            aria-label="Search nail designs">
+        </label>
+        <select id="categoryFilter" aria-label="Filter nail designs">
+          <option value="all">All designs</option>
+          <option value="classic">Classic & Nude</option>
+          <option value="glam">Glam & Glitter</option>
+          <option value="bold">Bold & Colourful</option>
+          <option value="french">French Tips</option>
+        </select>
+        <select id="sortFilter" aria-label="Sort nail designs">
+          <option value="featured">Featured</option>
+          <option value="low">Price: low to high</option>
+          <option value="high">Price: high to low</option>
+          <option value="name">Name: A to Z</option>
+        </select>
+      </div>
+
+      <div class="product-grid" id="productGrid" aria-live="polite"></div>
+    </section>
+
+    <section class="custom-section" id="custom">
+      <div class="custom-copy">
+        <span class="eyebrow">MADE JUST FOR YOU</span>
+        <h2>Your nails.<br><em>Your measurements.</em></h2>
+        <p>Have a particular look in mind? Choose a shape, length and
+          finish, then provide your measurements so your custom order
+          can be reviewed before production.</p>
+        <div class="custom-perks">
+          <span>✓ Your preferred shape</span>
+          <span>✓ Your preferred length</span>
+          <span>✓ Individual nail measurements</span>
+        </div>
+      </div>
+
+      <form id="customForm" class="measurement-form">
+        <h3>Custom nail request</h3>
+        <p class="form-intro">Measurements should be entered in millimetres (mm).</p>
+
+        <label for="customShape">Nail shape</label>
+        <select id="customShape" name="shape" required>
+          <option value="Almond">Almond</option>
+          <option value="Coffin">Coffin / Ballerina</option>
+          <option value="Square">Square</option>
+          <option value="Oval">Oval</option>
+          <option value="Stiletto">Stiletto</option>
+          <option value="Round">Round</option>
+        </select>
+
+        <label for="customLength">Nail length</label>
+        <select id="customLength" name="length" required>
+          <option value="Short">Short</option>
+          <option value="Medium" selected>Medium</option>
+          <option value="Long">Long</option>
+          <option value="Extra long">Extra long</option>
+        </select>
+
+        <div class="measurement-heading">
+          <label>Measure each nail (mm)</label>
+          <span>Thumb to pinky</span>
+        </div>
+        <p class="measurement-help">
+          Measure the widest part of each nail bed. Enter width and,
+          optionally, length in millimetres. Confirm your measurements
+          carefully before ordering.
+        </p>
+
+        <div class="measurement-grid" id="measurementGrid"></div>
+
+        <label for="customDesign">Design description / colour preference</label>
+        <textarea id="customDesign" name="design" rows="3"
+          placeholder="E.g. burgundy chrome, almond shape, gold details..."></textarea>
+
+        <label for="customBudget">Your budget (₦, optional)</label>
+        <input type="number" id="customBudget" name="budget"
+          min="0" step="100" placeholder="Enter your preferred budget">
+
+        <button type="submit" class="btn btn-primary full-width">
+          Add custom request to bag
+        </button>
+        <p class="form-footnote">Custom requests require price and availability confirmation.</p>
+      </form>
+    </section>
+
+    <section class="appointment-section" id="appointment">
+      <div class="appointment-copy">
+        <span class="eyebrow">LET'S MAKE TIME FOR BEAUTY</span>
+        <h2>Book your <em>appointment.</em></h2>
+        <p>Tell us what you have in mind and choose a date and time that work for you.
+          We’ll follow up on WhatsApp to confirm availability and any details before your appointment is finalised.</p>
+        <div class="appointment-perks">
+          <span>✓ Nail consultation and design guidance</span>
+          <span>✓ Press-on nail and custom-set enquiries</span>
+          <span>✓ Appointment details sent directly to WhatsApp</span>
+        </div>
+      </div>
+      <form id="appointmentForm" class="appointment-form">
+        <h3>Appointment request</h3>
+        <p class="form-intro">Complete the details below. Your booking is a request until we confirm it with you.</p>
+        <div class="appointment-fields">
+          <div class="appointment-field">
+            <label for="appointmentName">Full name *</label>
+            <input id="appointmentName" name="name" type="text" autocomplete="name" placeholder="Your full name" maxlength="100" required>
+          </div>
+          <div class="appointment-field">
+            <label for="appointmentPhone">Phone number *</label>
+            <input id="appointmentPhone" name="phone" type="tel" autocomplete="tel" placeholder="e.g. 08012345678" maxlength="25" required>
+          </div>
+          <div class="appointment-field">
+            <label for="appointmentType">Appointment type *</label>
+            <select id="appointmentType" name="type" required>
+              <option value="">Choose a service</option>
+              <option value="Nail consultation">Nail consultation</option>
+              <option value="Press-on nail fitting / sizing">Press-on nail fitting / sizing</option>
+              <option value="Custom nail design consultation">Custom nail design consultation</option>
+              <option value="Order collection / enquiry">Order collection / enquiry</option>
+              <option value="Other nail service">Other nail service</option>
+            </select>
+          </div>
+          <div class="appointment-field">
+            <label for="appointmentDate">Preferred date *</label>
+            <input id="appointmentDate" name="date" type="date" required>
+          </div>
+          <div class="appointment-field">
+            <label for="appointmentTime">Preferred time *</label>
+            <select id="appointmentTime" name="time" required>
+              <option value="">Choose a time</option>
+              <option value="09:00">9:00 AM</option>
+              <option value="10:00">10:00 AM</option>
+              <option value="11:00">11:00 AM</option>
+              <option value="12:00">12:00 PM</option>
+              <option value="13:00">1:00 PM</option>
+              <option value="14:00">2:00 PM</option>
+              <option value="15:00">3:00 PM</option>
+              <option value="16:00">4:00 PM</option>
+              <option value="17:00">5:00 PM</option>
+            </select>
+          </div>
+          <div class="appointment-field appointment-field-wide">
+            <label for="appointmentNotes">Additional notes (optional)</label>
+            <textarea id="appointmentNotes" name="notes" rows="4" maxlength="1000" placeholder="Preferred nail style, design ideas, or anything we should know..."></textarea>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary full-width">Request appointment via WhatsApp ↗</button>
+        <p class="form-footnote">Your WhatsApp message will open for you to review and send. Date and time are subject to confirmation.</p>
+      </form>
+    </section>
+
+    <section class="about section" id="about">
+      <div class="about-mark">B<span>✦</span></div>
+      <div>
+        <span class="eyebrow">A LITTLE ABOUT BERRY'S</span>
+        <h2>Little details.<br><em>Big confidence.</em></h2>
+        <p>Berry's Nails Collections celebrates self-expression through
+          beautiful nail designs. From everyday elegance to statement
+          sets, our goal is to make your personal style feel special.</p>
+      </div>
+    </section>
+
+    <section class="newsletter">
+      <span class="eyebrow">STAY IN THE LOOP</span>
+      <h2>A little more <em>Berry.</em></h2>
+      <p>New designs, fresh inspiration and updates from our collection.</p>
+      <a class="btn btn-light" id="newsletterLink" href="#collection">
+        Discover the collection ↗
+      </a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand footer-brand" href="#home">
+      <span class="brand-mark">B</span>
+      <span>Berry's <small>N A I L S  C O L L E C T I O N S</small></span>
+    </a>
+    <p>Beautiful nails. Beautifully you.</p>
+    <div class="footer-links">
+      <a href="#collection">Shop</a>
+      <a href="#custom">Custom orders</a>
+      <a href="#appointment">Book appointment</a>
+      <a id="footerWhatsApp" href="https://wa.me/2349036525379" target="_blank" rel="noopener noreferrer">Contact us on WhatsApp</a>
+    </div>
+    <small>© <span id="year"></span> Berry's Nails Collections. All rights reserved.</small>
+  </footer>
+
+  <!-- Shopping cart drawer -->
+  <div class="overlay" id="cartOverlay" hidden>
+    <button class="overlay-dismiss" id="overlayDismiss"
+      aria-label="Close cart"></button>
+    <aside class="cart-drawer" role="dialog" aria-modal="true"
+      aria-labelledby="cartTitle">
+      <div class="cart-header">
+        <div>
+          <span class="eyebrow">YOUR PICKS</span>
+          <h2 id="cartTitle">Shopping bag</h2>
+        </div>
+        <button id="closeCart" class="close-button" aria-label="Close cart">✕</button>
+      </div>
+      <div id="cartItems" class="cart-items"></div>
+      <div class="cart-bottom">
+        <div class="subtotal"><span>Subtotal</span><strong id="cartSubtotal">₦0</strong></div>
+        <p>Delivery fees and custom-order pricing are confirmed separately.</p>
+        <button class="btn btn-primary full-width" id="checkoutButton">
+          Order via WhatsApp ↗
+        </button>
+        <button class="text-button full-width" id="continueShopping">Continue shopping</button>
+      </div>
+    </aside>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
